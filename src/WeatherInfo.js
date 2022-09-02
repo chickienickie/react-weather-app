@@ -16,15 +16,17 @@ export default function WeatherInfo(props) {
         <div className="col-6">
           <div className="d-flex">
             <div>
-              <img className="image img-fluid" alt="weather-icon" src={props.data.mainIcon} size="50" />
+              <img className="image img-fluid" alt="weather-icon" src={props.data.mainIcon} size="25" />
             </div>
 
-            <div>
-              <WeatherTemperature fahrenheit={props.data.temperature} />
-            </div>
+
           </div>
         </div>
         <div className="col-6">
+          <div>
+            <WeatherTemperature fahrenheit={props.data.temperature} />
+          </div>
+          < br></br>
           <ul>
             <li>Humidity: {props.data.humidity}%</li>
             <li>Wind: {props.data.wind} mph</li>
